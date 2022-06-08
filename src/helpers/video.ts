@@ -1,7 +1,7 @@
 export const requestVideoPermission = async () => {
   if ("mediaDevices" in navigator && "getUserMedia" in navigator.mediaDevices) {
     let stream = await navigator.mediaDevices.getUserMedia({
-      video: true,
+      video: { facingMode: "user" },
       audio: true,
     });
     console.log("All tracks:", stream.getTracks());
