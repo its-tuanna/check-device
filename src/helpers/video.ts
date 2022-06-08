@@ -14,3 +14,7 @@ export async function getDevices() {
   const devices = await navigator.mediaDevices.enumerateDevices();
   console.log("All devices:", devices);
 }
+
+export async function returnGetDevices() {
+  return navigator.mediaDevices.enumerateDevices();
+}
